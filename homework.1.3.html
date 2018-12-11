@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+    
+		<script>
+			var answer;
+			var europeanSize;
+			var internationalSize = prompt("Введите размер в международном формате: ", "");
+		 	while (true) {
+		 		if (internationalSize == null) {
+					break;
+				}	else if (internationalSize == 'XS') {
+					europeanSize = '32-36';
+					answer = true;
+					break;
+				} else if (internationalSize == 'S') {
+		  		europeanSize = '36-40';
+		  		answer = true;
+					break;
+		  	} else if (internationalSize == 'M') {
+		  		europeanSize = '40-44';
+		  		answer = true;
+					break;
+		  	} else if (internationalSize == 'L') {
+		  		europeanSize = '44-48';
+		  		answer = true;
+					break;
+		  	} else if (internationalSize == 'XL') {
+		  		europeanSize = '48-52';
+		  		answer = true;
+					break;
+				} else if (internationalSize == 'XXL') {
+		  		europeanSize = '52-56';
+		  		answer = true;
+					break;
+				} else {
+					alert(`${internationalSize} не является размером одежды в международном формате.`);
+					internationalSize = prompt("Введите размер в международном формате: ", "");
+					continue;
+				}
+		  }
+		  if (answer == true){
+		 	 alert(`Международному формату ${internationalSize} соответствует европейский размер ${europeanSize}.`);
+		 	}
+		</script>
+
+	</body>
+	
+</html>

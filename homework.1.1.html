@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+    
+		<script>
+			var userInput = prompt("Введите любое целое число: ", "");
+		 	while (true) {
+		  	function isNumeric() {
+		  		return !isNaN(parseFloat(userInput)) && isFinite(userInput) && (parseInt(userInput) == userInput);
+				} 
+				if (userInput == null) {
+					break;
+				} else if (isNumeric() == false) {
+		  		alert('Неверно! Попробуйте еще раз.');
+		  		var userInput = prompt("Введите любое целое число: ", "");
+		  		continue
+		  	} else if (userInput % 2 == 0) {
+		  		alert(`Введенное число ${userInput} является чётным.`);
+		  		break;
+		  	} else {
+		  		alert(`Введенное число ${userInput} является нечётным.`)
+		  		break;
+		  	}
+		  } 
+		</script>
+
+	</body>
+
+</html>

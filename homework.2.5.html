@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+    
+		<script>
+		 	var answer = 1;
+			var userInput = prompt('Введите любое целое положительное число:', '');
+			while (true) {
+				var n = userInput;
+        if (userInput == null) {
+        	break;
+        } else if (isNumeric() == false) {
+          alert('Неверно! Попробуйте еще раз.');
+          userInput = prompt('Введите любое целое положительное число:', '');
+        } else {
+        	while(userInput) {
+        		answer *= userInput--;
+        	}
+        	alert(`!${n} = ${answer}.`);
+        	break;
+        }
+      }
+
+      function isNumeric() {
+      return !isNaN(parseFloat(userInput)) && isFinite(userInput) && !(userInput < 0);
+      } 
+		</script>
+
+	</body>
+
+</html>

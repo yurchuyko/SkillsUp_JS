@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    
+    <script>
+      var answer;
+      var sale;
+    	var totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+      outer: while (true) {
+        if (totalCost == null) {
+        	break;
+        } else if (isNumeric() == false) {
+          alert('Неверно! Попробуйте еще раз.');
+          totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+          continue;
+        } else if (totalCost < 0) {
+          alert('Мы Вам ничего не должны! Введите корректную сумму.');
+          totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+          continue;
+        } else if (totalCost == 0) {
+          alert('Кто не тратит, тот не имеет скидки! Попробуйте еще раз.');
+          totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+          continue;
+        } else if (totalCost > 0 && totalCost < 1000 ) {
+          alert('Ваша скидка составляет 2%.');
+          sale = 2;
+          var currentProductCost = prompt("Введите сумму текущей покупки: ", "");
+          while (true) {
+            if (currentProductCost == null) {
+              break outer;
+            } else if (isNumeric2() == false) {
+              alert('Некорректные данные! Попробуйте еще раз.');
+              currentProductCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+              continue;
+            } else {
+              answer = true;
+              break outer;
+            }
+          }
+        } else if (totalCost >= 1000 && totalCost < 3000 ) {
+          alert('Ваша скидка составляет 5%.');
+          sale = 5;
+          currentProductCost = prompt("Введите сумму текущей покупки: ", "");
+          while (true) {
+            if (currentProductCost == null) {
+              break outer;
+            } else if (isNumeric2() == false) {
+              alert('Некорректные данные! Попробуйте еще раз.');
+              currentProductCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+              continue;
+            } else {
+              answer = true;
+              break outer;
+            }
+          }
+        } else if (totalCost >= 3000 && totalCost < 10000 ) {
+          alert('Ваша скидка составляет 8%.');
+          sale = 8;
+          currentProductCost = prompt("Введите сумму текущей покупки: ", "");
+          while (true) { 
+            if (currentProductCost == null) {
+              break outer;
+            } else if (isNumeric2() == false) {
+              alert('Некорректные данные! Попробуйте еще раз.');
+              currentProductCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+              continue;
+            } else {
+              answer = true;
+              break outer;
+            }
+          }
+        } else if (totalCost >= 10000 && totalCost < Infinity ) {
+          alert('Ваша скидка составляет 10%.');
+          sale = 10;
+          currentProductCost = prompt("Введите сумму текущей покупки: ", "");
+          while (true) {
+            if (currentProductCost == null) {
+              break outer;
+            } else if (isNumeric2() == false) {
+              alert('Некорректные данные! Попробуйте еще раз.');
+              currentProductCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+              continue;
+            } else {
+              answer = true;
+              break outer;
+            }
+          }
+        }
+      }
+      if (answer == true) {
+        var finalCost = currentProductCost - currentProductCost * (sale / 100);
+        alert(`Ваша стоимость текущей покупки с учётом скидки составляет ${finalCost} грн.`);
+      }
+
+      function isNumeric() {
+        return !isNaN(parseFloat(totalCost)) && isFinite(totalCost);
+      } 
+      function isNumeric2() {
+        return !isNaN(parseFloat(currentProductCost)) && isFinite(currentProductCost) && !(currentProductCost < 0);
+      } 
+    </script>
+
+  </body>
+
+</html>

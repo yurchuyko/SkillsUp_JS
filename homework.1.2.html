@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+      
+    <script>
+    	var totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+     	while (true) {
+    		if (totalCost == null) {
+    			break;
+    		} else if (isNumeric() == false) {
+      		alert('Неверно! Попробуйте еще раз.');
+      		totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+      		continue
+      	} else if (totalCost < 0) {
+          alert('Мы Вам ничего не должны! Введите корректную сумму.');
+          totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+          continue
+        } else if (totalCost == 0) {
+           alert('Кто не тратит, тот не имеет скидки! Попробуйте еще раз.');
+          totalCost = prompt("Введите общую сумму денег, потраченную Вами за все время: ", "");
+          continue
+        } else if (totalCost > 0 && totalCost < 1000 ) {
+      		alert('Ваша скидка составляет 2%.');
+      		break;
+      	} else if (totalCost >= 1000 && totalCost < 3000 ) {
+          alert('Ваша скидка составляет 5%.');
+          break;
+      	} else if (totalCost >= 3000 && totalCost < 10000 ) {
+          alert('Ваша скидка составляет 8%.');
+          break;
+        } else if (totalCost >= 10000 && totalCost < Infinity ) {
+          alert('Ваша скидка составляет 10%.');
+          break;
+        }
+      }
+
+      function isNumeric() {
+        return !isNaN(parseFloat(totalCost)) && isFinite(totalCost);
+      } 
+    </script>
+
+  </body>
+
+</html>

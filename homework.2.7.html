@@ -1,0 +1,25 @@
+<html>
+
+  <body>
+
+
+    <script>
+      var password = "Passw0rd!";
+      for (var i = 5; i > 0; i--){
+        var n = i;
+        var userInput = prompt(`Enter your password (${--n} attempts left):`, "");
+        if (userInput == null) {
+          alert('Access denied!');
+          break;
+        } else if (i == 1 && userInput !== password) {
+            alert('Try it later!');
+        } else if (userInput == password) {
+          alert('You successfully logged in!');
+          break;
+        } else {
+          alert('Your password is incorrect, try again.')
+        }  
+      }
+    </script>
+
+  </body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+    
+		<script>
+			var europeanSize;
+			var internationalSize = prompt("Введите размер в международном формате: ", "");
+		 	outer: while (true) {
+		 		switch (internationalSize.trim().toLowerCase()) {
+		 			case null:
+		 				break outer;
+		 			case 'xs':
+		 				europeanSize = '32-36';
+		 				alert(`Международному формату ${internationalSize.toUpperCase()} соответствует европейский размер ${europeanSize}.`);
+		 				break outer;
+		 			case 's':
+		 				europeanSize = '36-40';
+		 				alert(`Международному формату ${internationalSize.toUpperCase()} соответствует европейский размер ${europeanSize}.`);
+		 				break outer;
+		 			case 'm':
+		 				europeanSize = '40-44';
+		 				alert(`Международному формату ${internationalSize.toUpperCase()} соответствует европейский размер ${europeanSize}.`);
+		 				break outer;
+		 			case 'l':
+		 				europeanSize = '44-48';
+		 				alert(`Международному формату ${internationalSize.toUpperCase()} соответствует европейский размер ${europeanSize}.`);
+		 				break outer;
+		 			case 'xl':
+		 				europeanSize = '48-52';
+		 				alert(`Международному формату ${internationalSize.toUpperCase()} соответствует европейский размер ${europeanSize}.`);
+		 				break outer;
+		 			case 'xxl':
+		 				europeanSize = '52-56';
+		 				alert(`Международному формату ${internationalSize.toUpperCase()} соответствует европейский размер ${europeanSize}.`);
+		 				break outer;
+		 			default:
+			 			alert(`${internationalSize} не является размером одежды в международном формате.`);
+						internationalSize = prompt("Введите размер в международном формате: ", "");
+				}
+			}
+		</script>
+
+	</body>
+
+</html>
