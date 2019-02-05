@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  </head>
+
+  <body>
+    <script>
+
+      function randomNumber(array) {
+        var random = Math.floor(Math.random() * (array.length - 0)) + 0;
+        return array[random];
+      }
+
+      var arr = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+      var randomNum1 = randomNumber(arr);
+      console.log(randomNum1); 
+      var randomNum2 = randomNumber(arr);
+      console.log(randomNum2); 
+
+    </script>
+
+  </body>
+
+</html>
