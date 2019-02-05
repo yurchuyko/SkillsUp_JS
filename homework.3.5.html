@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    
+    <script>
+       do {
+        var number = prompt('Enter any number:', '');
+        var objNum = new Number(number);
+        if (isFinite(number) == true ) {
+          if (Number.isInteger(+number) == true) {
+            alert(number);
+          } else {
+            alert(objNum.toFixed(2));
+          }
+        } else {
+          alert(`Is NaN! Try again.`);
+        }
+       } while (isFinite(number) !== true);
+    </script>
+
+  </body>
+
+</html>

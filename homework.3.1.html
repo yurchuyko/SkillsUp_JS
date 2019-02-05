@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+    
+		<script>
+      do {
+			 var email = prompt('Enter Your email:', '');
+       if (isEmail() == true) {
+        alert(`Email ${email} is valid!`);
+       } else {
+        alert(`Email ${email} invalid!`);
+       }
+			} while (isEmail() == false);
+
+      function isEmail() {
+      return email.indexOf('@') !== 0 && 
+             email.indexOf('@') !== -1 &&
+             email.indexOf('@') == email.lastIndexOf('@') &&
+             email.indexOf('.', email.indexOf('@')) - email.indexOf('@') > 1;
+      }
+		</script>
+
+	</body>
+
+</html>

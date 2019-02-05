@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    
+    <script>
+       var text = prompt('Enter any sentence:', '');
+       var modifiedText = text.split(' ');
+       var finalText = '';
+      for(var i = 0; i < modifiedText.length; i++) {
+        if (i % 2 == 0) {
+          finalText += modifiedText[i].toLowerCase();
+        } else {
+          finalText += modifiedText[i].toUpperCase();
+        }
+        if (i < modifiedText.length -1) {
+          finalText += ' ';
+        } else {
+          finalText += '';
+        }
+      }
+      alert(finalText);
+    </script>
+
+  </body>
+
+</html>

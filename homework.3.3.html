@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+    
+		<script>
+			 var text = prompt('Enter some text:', '');
+       var maxLength = prompt('Enter the number of characters that you want to display:', '');
+       var modifiedText = text.split('');
+       var finalText = '';
+       if (maxLength < 4) {
+        finalText += '...';
+        alert(finalText);
+       } else if (text.length > maxLength) {
+        for(var i = 0; i < maxLength - 3; i++) {
+            finalText += modifiedText[i];
+          } 
+        finalText += '...';
+        alert(finalText);
+       } else {
+        alert(text);
+       } 
+		</script>
+
+	</body>
+
+</html>

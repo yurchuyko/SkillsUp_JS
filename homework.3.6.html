@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    
+    <script>
+      alert(`Welcome to the game "Guess The Number"!!!\nYou must guess the number from 0 to 100.`);
+      var n = 5;
+      do {
+        var userInput = prompt(`Enter any number from 0 to 100! You have ${n--} attempts:`, '');
+        if (userInput < 0 || userInput > 100) {
+          n++;
+          alert(`Wrong nunber! Try again!`);
+          continue;
+        }
+        var min = 0;
+        var max = 100;
+        var random = Math.floor(Math.random() * (max - min)) + min;
+        if (userInput == random) {
+          alert(`Congratulations, You won!`);
+          break;
+        } else if (n == 0 && userInput !== random) {
+          alert(`Game over!`);
+        } else if (userInput == null) {
+          break;
+        } else {
+          var fail = (random > userInput)
+          ? 'Fail! The guess number was bigger! Try again!'
+          : 'Fail! The guess number was less! Try again!';
+          alert(fail);
+        }
+      } while (n > 0)
+    </script>
+
+  </body>
+
+</html>

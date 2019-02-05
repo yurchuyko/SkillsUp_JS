@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+    
+		<script>
+			 var email = prompt('Enter Your email:', '');
+       var modifiedEmail = email.split('');
+       var stopIndex = email.indexOf('@');
+       var combiniedEmail = '';
+       for(var i = 0; i < email.length; i++) {
+        if (i < stopIndex) {
+          modifiedEmail[i] = '*';
+          combiniedEmail += modifiedEmail[i];
+        } else {
+          combiniedEmail += modifiedEmail[i]
+        }
+      }
+      alert(combiniedEmail);
+		</script>
+
+	</body>
+
+</html>
