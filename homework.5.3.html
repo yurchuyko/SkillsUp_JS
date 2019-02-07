@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    div {
+      font-family: Arial;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 2px solid #CCC;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    .Button {
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: 1px solid #4CAF50;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      background-color: #4CAF50;
+      color: white;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+    <div>
+      <label>Enter number:</label>
+      <input type="text"
+             placeholder="Enter number"
+             id="number">
+      
+      <button class="Button" onclick='numberCheck()'>Submit</button>
+    </div>
+     
+   <script>     
+    function numberCheck() {
+     var input = document.getElementById('number');
+     if (input.value == '') {
+       input.style.backgroundColor = 'Grey';
+     } else if (input.value >=1 && input.value <= 100) {
+       input.style.backgroundColor = 'Green';
+     } else {
+       input.style.backgroundColor = 'Red';
+     }
+    }
+  </script>
+</body>
+</html>
