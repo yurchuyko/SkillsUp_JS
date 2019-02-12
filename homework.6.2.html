@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    img {
+      width: 500px;
+      height: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://www.nrcm.org/wp-content/uploads/2018/03/raccoon-in-winter-2-South-China-Jayne-Winters.jpg" id="img">
+  
+   <script>
+    img.onmouseenter = mouseEnter;
+    img.onmouseleave = mouseLeave;
+
+    function mouseEnter() {
+      img.src = 'https://www.popsci.com/sites/popsci.com/files/styles/655_1x_/public/images/2018/07/curious_raccoon.jpg?itok=5ef5ZNWh&fc=50,50';
+    }
+    function mouseLeave() {
+      img.src = "https://www.nrcm.org/wp-content/uploads/2018/03/raccoon-in-winter-2-South-China-Jayne-Winters.jpg";
+    }
+  </script>
+</body>
+</html>

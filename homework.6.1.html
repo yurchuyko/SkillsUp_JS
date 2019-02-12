@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <ul id='list'>
+    <li>Star Wars</li>
+    <li>Riddick</li>
+    <li>The Lord of the Rings</li>
+    <li>Teletubbies</li>
+  </ul>
+  
+   <script>
+    var li = document.getElementsByTagName('li');
+    list.onclick = highlight;
+    function highlight(event) {
+      if (event.ctrlKey) {
+          event.target.classList.toggle("red");
+        return false;
+        }
+      if (event.target.classList.contains("red")) {
+        event.target.classList.toggle("red");
+      } else {
+        Array.from(li).forEach(function(element) {
+         element.classList.remove("red");
+        })
+        event.target.classList.toggle("red");
+      }
+    }
+  </script>
+</body>
+</html>
